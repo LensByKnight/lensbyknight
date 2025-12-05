@@ -114,35 +114,36 @@
             </div>
 
             <!-- Simple email form (opens the visitor's email app) -->
-            <form class="contact-form"
-                  action="mailto:LensByKnight.Products@gmail.com"
-                  method="post"
-                  enctype="text/plain">
-                <label>
-                    Your name
-                    <input type="text" name="Name" required>
-                </label>
+          <form class="contact-form"
+      action="https://formsubmit.co/LensByKnight.Products@gmail.com"
+      method="POST">
 
-                <label>
-                    Your email
-                    <input type="email" name="Email" required>
-                </label>
+    <label>
+        Your name
+        <input type="text" name="Name" required>
+    </label>
 
-                <label>
-                    Brand / business name
-                    <input type="text" name="Brand">
-                </label>
+    <label>
+        Your email
+        <input type="email" name="Email" required>
+    </label>
 
-                <label>
-                    Tell me about your products & what you need
-                    <textarea name="Message" rows="5" required></textarea>
-                </label>
+    <label>
+        Brand / business name
+        <input type="text" name="Brand">
+    </label>
 
-                <button type="submit" class="btn-primary">Send enquiry</button>
-                <p class="small">
-                    This will open your email app with the details filled in.
-                </p>
-            </form>
+    <label>
+        Tell me about your products & what you need
+        <textarea name="Message" rows="5" required></textarea>
+    </label>
+
+    <!-- Hidden FormSubmit options -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <button type="submit" class="btn-primary">Send enquiry</button>
+</form>
         </div>
     </section>
 
@@ -157,6 +158,7 @@
     </script>
 </body>
 </html>
+
 
 
 
