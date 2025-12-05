@@ -154,27 +154,38 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-<div id="cookie-banner">
-    <p>This website uses cookies to ensure you get the best experience.</p>
-    <button id="accept-cookies">OK</button>
-</div>
+    <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-hidden">
+        <p>This website uses cookies to ensure you get the best experience.</p>
+        <button id="accept-cookies">OK</button>
+    </div>
+
     <script>
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
+        window.addEventListener('DOMContentLoaded', function () {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
 
-    // Check if user already accepted cookies
-    if (localStorage.getItem('cookies-accepted')) {
-        banner.style.display = 'none';
-    }
+            if (!banner || !acceptBtn) return;
 
-    // Handle accept button
-    acceptBtn.addEventListener('click', () => {
-        localStorage.setItem('cookies-accepted', 'yes');
-        banner.style.display = 'none';
-    });
-</script>
+            // If already accepted, keep it hidden
+            if (localStorage.getItem('cookies-accepted') === 'yes') {
+                banner.classList.add('cookie-hidden');
+                return;
+            }
+
+            // Otherwise, show it
+            banner.classList.remove('cookie-hidden');
+
+            acceptBtn.addEventListener('click', function () {
+                localStorage.setItem('cookies-accepted', 'yes');
+                banner.classList.add('cookie-hidden');
+            });
+        });
+    </script>
 </body>
 </html>
+
+
 
 
 
