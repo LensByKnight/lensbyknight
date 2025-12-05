@@ -182,8 +182,28 @@
             });
         });
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const btn = document.getElementById("accept-cookies");
+
+    // If already accepted, hide the banner
+    if (localStorage.getItem("cookies-accepted") === "yes") {
+        banner.classList.add("cookie-hidden");
+        return;
+    }
+
+    // When user clicks OK
+    btn.addEventListener("click", function () {
+        localStorage.setItem("cookies-accepted", "yes");
+        banner.classList.add("cookie-hidden");
+    });
+});
+</script>
+
 </body>
 </html>
+
 
 
 
