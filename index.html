@@ -154,8 +154,28 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+<div id="cookie-banner">
+    <p>This website uses cookies to ensure you get the best experience.</p>
+    <button id="accept-cookies">OK</button>
+</div>
+    <script>
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+
+    // Check if user already accepted cookies
+    if (localStorage.getItem('cookies-accepted')) {
+        banner.style.display = 'none';
+    }
+
+    // Handle accept button
+    acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('cookies-accepted', 'yes');
+        banner.style.display = 'none';
+    });
+</script>
 </body>
 </html>
+
 
 
 
