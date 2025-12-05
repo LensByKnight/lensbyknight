@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lens By Knight | Product Photography</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- HEADER / NAVBAR -->
+    <header class="site-header">
+        <div class="logo">
+    <img src="images/logo.png" alt="Lens By Knight Logo" class="logo-img">
+</div>
+
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Book Me</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <p class="hero-tagline">Young Product Photographer</p>
+            <h1>Clean, modern product photography for brands.</h1>
+            <p class="hero-text">
+                Lens By Knight specialises in sharp, minimal images that make your products stand out.
+            </p>
+            <a href="#portfolio" class="btn-primary">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+        <div class="section-header">
+            <h2>Portfolio</h2>
+            <p>Some recent product work.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Replace these image paths with your own images inside the images/ folder -->
+            <figure class="grid-item">
+                <img src="images/product1.jpg" alt="Product photo 1">
+                <figcaption>Cosmetics product shoot</figcaption>
+            </figure>
+            <figure class="grid-item">
+                <img src="images/product2.jpg" alt="Product photo 2">
+                <figcaption>Close up cosmetics product shoot</figcaption>
+            </figure>
+            <figure class="grid-item">
+                <img src="images/product3.jpg" alt="Product photo 3">
+                <figcaption>Chocolate bar product</figcaption>
+            </figure>
+            <figure class="grid-item">
+                <img src="images/product4.jpg" alt="Product photo 4">
+                <figcaption>Studio bottle lighting test</figcaption>
+            </figure>
+            <!-- Add more <figure> blocks as you get more work -->
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+        <div class="section-header">
+            <h2>About Lens By Knight</h2>
+        </div>
+        <div class="two-column">
+            <div>
+                <p>
+                    Hi, I'm <strong>Lens By Knight</strong>, a young photographer focused on
+                    clean, professional product images. I love using light, reflections and
+                    composition to make everyday products look premium.
+                </p>
+                <p>
+                    I currently work on portfolio projects and small brand shoots, building
+                    experience in e-commerce, social media content and simple studio setups.
+                </p>
+            </div>
+            <div>
+                <p>
+                    If you’re a small business or brand looking for fresh product photos for
+                    your website or Instagram, I’d love to chat about ideas.
+                </p>
+                <p>
+                    Based in the UK. Open to collaborations and product photography projects.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / BOOKING -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Book a Shoot</h2>
+            <p>Tell me a bit about your products and what kind of photos you need.</p>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-details">
+                <h3>Contact</h3>
+                <p><strong>Email:</strong> <a href="mailto:LensByKnight.Products@gmail.com">LensByKnight.Products@gmail.com</a></p>
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lensbyknight_products" target="_blank">@lensbyknight_products</a></p>
+                <p class="small">
+                    I usually reply within a couple of days. Please include how many products
+                    you have and where the photos will be used (website, social media, etc.).
+                </p>
+            </div>
+
+            <!-- Simple email form (opens the visitor's email app) -->
+            <form class="contact-form"
+                  action="mailto:LensByKnight.Products@gmail.com"
+                  method="post"
+                  enctype="text/plain">
+                <label>
+                    Your name
+                    <input type="text" name="Name" required>
+                </label>
+
+                <label>
+                    Your email
+                    <input type="email" name="Email" required>
+                </label>
+
+                <label>
+                    Brand / business name
+                    <input type="text" name="Brand">
+                </label>
+
+                <label>
+                    Tell me about your products & what you need
+                    <textarea name="Message" rows="5" required></textarea>
+                </label>
+
+                <button type="submit" class="btn-primary">Send enquiry</button>
+                <p class="small">
+                    This will open your email app with the details filled in.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Lens By Knight · Product Photography</p>
+    </footer>
+
+    <!-- Small script just to set the year automatically -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
