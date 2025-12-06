@@ -6,7 +6,6 @@
     <title>Portfolio – Lens By Knight</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="site-header">
@@ -18,22 +17,66 @@
     <nav class="nav">
         <a href="index.html">Home</a>
         <a href="portfolio.html" class="active">Portfolio</a>
-        <a href="#contact">Book Me</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Book Me</a>
     </nav>
 </header>
 
-<section style="padding: 60px; text-align:center;">
-    <h1>Portfolio</h1>
-    <p>Here are some of my recent product photography shots.</p>
-
-    <div class="portfolio-grid">
-        <img src="Product1.jpg" alt="">
-        <img src="Product2.jpg" alt="">
-        <img src="Product3.jpg" alt="">
-        <!-- Add more as needed -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <p class="hero-tagline">Portfolio</p>
+        <h1>Product photography for modern brands.</h1>
+        <p class="hero-text">
+            A selection of my recent product shoots. I focus on clean, minimal images
+            designed for websites, social media and online shops.
+        </p>
     </div>
-
 </section>
 
+<section class="section">
+    <div class="section-header">
+        <h2>Gallery</h2>
+        <p>Scroll through a mix of cosmetics, lifestyle and studio product work.</p>
+    </div>
+
+    <div class="portfolio-grid">
+        <!-- One item = one image + caption -->
+        <figure class="portfolio-item">
+            <img src="Product1.jpg" alt="Cosmetics product shoot">
+            <figcaption>Cosmetics product shoot</figcaption>
+        </figure>
+
+        <figure class="portfolio-item">
+            <img src="Product2.jpg" alt="Snack / food product shoot">
+            <figcaption>Snack / food product shoot</figcaption>
+        </figure>
+
+        <figure class="portfolio-item">
+            <img src="Product3.jpg" alt="Skincare / grooming product">
+            <figcaption>Skincare / grooming product</figcaption>
+        </figure>
+
+        <!-- Duplicate + change filenames/captions as you add more images -->
+        <!--
+        <figure class="portfolio-item">
+            <img src="Product4.jpg" alt="Bottle / drink product">
+            <figcaption>Bottle / drink product</figcaption>
+        </figure>
+        -->
+    </div>
+
+    <div class="portfolio-cta">
+        <p>Want your products to look like this?</p>
+        <a href="index.html#contact" class="btn-primary">Book a product shoot</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>© <span id="year"></span> Lens By Knight · Product Photography</p>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
