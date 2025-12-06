@@ -311,11 +311,11 @@ body {
 
 .portfolio-grid img {
     width: 100%;
-    max-width: 250px;      /* limits image size */
     height: auto;
+    max-width: 100%;       /* let it fill the card */
     border-radius: 10px;
-    object-fit: cover;
-    justify-self: center;  /* centers each image */
+    object-fit: contain;   /* show whole image, no cropping */
+    justify-self: center;
 }
 
 /* Portfolio page */
@@ -376,6 +376,7 @@ body {
     margin: 0;
     font-size: 0.95rem;
 }
+
 
 
 
