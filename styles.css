@@ -318,6 +318,65 @@ body {
     justify-self: center;  /* centers each image */
 }
 
+/* Portfolio page */
+.page-hero {
+    padding: 5rem min(8vw, 4rem) 3rem;
+    background: radial-gradient(circle at top left, #ffffff 0, #f3f3f3 55%, #e7e7e7 100%);
+}
+
+.page-hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+}
+
+.portfolio-item {
+    background-color: #ffffff;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-item figcaption {
+    padding: 0.85rem 1rem 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-cta {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.portfolio-cta p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 
 
 
