@@ -311,12 +311,13 @@ body {
 
 .portfolio-grid img {
     width: 100%;
-    max-width: 350px;      /* limits image size */
+    max-width: 250px;      /* limits image size */
     height: auto;
     border-radius: 10px;
     object-fit: cover;
     justify-self: center;  /* centers each image */
 }
+
 
 
 
