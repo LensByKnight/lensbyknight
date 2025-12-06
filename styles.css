@@ -343,6 +343,8 @@ body {
     overflow: hidden;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;   /* important */
 }
 
 .portfolio-item img {
@@ -375,6 +377,12 @@ body {
 .portfolio-cta p {
     margin: 0;
     font-size: 0.95rem;
+}
+
+.portfolio-caption {
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+    color: #333;
 }
 
 
