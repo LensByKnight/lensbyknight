@@ -454,6 +454,49 @@ body {
 }
 
 
+/* REVIEWS SECTION */
+.reviews-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.review-item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.review-author {
+    font-weight: 600;
+    color: #000;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+  <div class="reviews-cta">
+    <a href="https://g.page/r/CY1A9qM8rMQmEBM/review" target="_blank" class="btn-review">
+      ⭐ Leave a review on Google
+    </a>
+  </div>
+</section>
+
 
 
 
