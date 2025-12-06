@@ -539,8 +539,8 @@ body {
 }
 
 .how-card img {
-    width: 140px;      /* increase this number for bigger icons */
-    height: 140px;     /* keep square shape */
+    width: 160px;      /* increase this number for bigger icons */
+    height: 160px;     /* keep square shape */
     object-fit: contain;
     margin-bottom: 1rem;
     display: block;
@@ -558,6 +558,7 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+
 
 
 
