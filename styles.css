@@ -514,6 +514,48 @@ body {
 }
 
 
+/* How It Works Section */
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.how-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.how-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.how-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.how-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.how-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 
 
 
