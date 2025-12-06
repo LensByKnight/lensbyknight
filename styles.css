@@ -539,10 +539,13 @@ body {
 }
 
 .how-card img {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1rem;
+    width: 90px;      /* increase this number for bigger icons */
+    height: 90px;     /* keep square shape */
     object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .how-card h3 {
@@ -555,6 +558,7 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+
 
 
 
