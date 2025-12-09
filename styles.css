@@ -560,6 +560,37 @@ body {
 }
 
 
+/* Masonry Grid */
+.masonry-grid {
+    column-count: 3;        /* number of columns */
+    column-gap: 1.5rem;      /* space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.masonry-item {
+    break-inside: avoid;    /* prevents items breaking awkwardly */
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: block;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;           /* keeps natural image height */
+    display: block;
+    object-fit: cover;
+}
+
+.masonry-item p {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
 
 
 
