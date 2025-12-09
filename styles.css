@@ -363,7 +363,21 @@ body {
     .masonry-grid {
         column-count: 1;
     }
+
+    /* Tablets / small laptops */
+@media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 3;     /* 3 columns on iPad / small screens */
+    }
 }
+
+/* Phones (iPhone etc.) */
+@media (max-width: 600px) {
+    .masonry-grid {
+        column-count: 2;     /* 2 columns on phones */
+    }
+}
+
 
 
 .portfolio-cta {
@@ -558,6 +572,7 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+
 
 
 
