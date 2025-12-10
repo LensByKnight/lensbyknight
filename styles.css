@@ -1,4 +1,6 @@
-/* Base styles */
+/* =========
+   Base styles
+   ========= */
 *,
 *::before,
 *::after {
@@ -7,14 +9,15 @@
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     color: #111;
     background-color: #f6f6f6;
     line-height: 1.6;
 }
 
-/* Layout helpers */
+/* =========
+   Sections / layout helpers
+   ========= */
 .section {
     padding: 4rem min(8vw, 4rem);
     background-color: #f6f6f6;
@@ -35,7 +38,9 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Header / Nav */
+/* =========
+   Header / Nav
+   ========= */
 .site-header {
     position: sticky;
     top: 0;
@@ -92,7 +97,9 @@ body {
     color: #000;
 }
 
-/* Hero */
+/* =========
+   Hero
+   ========= */
 .hero {
     padding: 6rem min(8vw, 4rem);
     background: radial-gradient(circle at top left, #ffffff 0, #f1f1f1 55%, #e5e5e5 100%);
@@ -121,7 +128,9 @@ body {
     margin-bottom: 1.75rem;
 }
 
-/* Buttons */
+/* =========
+   Buttons
+   ========= */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -136,8 +145,7 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: transform 0.15s ease, box-shadow 0.15s ease,
-        background-color 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .btn-primary:hover {
@@ -146,7 +154,9 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* Portfolio grid */
+/* =========
+   Simple card grid (used on home)
+   ========= */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -175,7 +185,9 @@ body {
     color: #555;
 }
 
-/* About */
+/* =========
+   About (two-column text)
+   ========= */
 .two-column {
     max-width: 1000px;
     margin: 0 auto;
@@ -188,7 +200,9 @@ body {
     margin-top: 0;
 }
 
-/* Contact */
+/* =========
+   Contact layout
+   ========= */
 .contact-layout {
     max-width: 1000px;
     margin: 0 auto;
@@ -243,7 +257,9 @@ body {
     border-color: #111;
 }
 
-/* Footer */
+/* =========
+   Footer / small text
+   ========= */
 .site-footer {
     text-align: center;
     padding: 2rem 1rem 2.5rem;
@@ -251,13 +267,14 @@ body {
     color: #777;
 }
 
-/* Small text helper */
 .small {
     font-size: 0.8rem;
     color: #777;
 }
 
-/* Responsive tweaks */
+/* =========
+   Responsive tweaks (global)
+   ========= */
 @media (max-width: 768px) {
     .site-header {
         flex-direction: column;
@@ -282,43 +299,38 @@ body {
     }
 }
 
-/* Custom logo image */
+/* =========
+   Logo image
+   ========= */
 .logo-img {
     height: 45px;
     width: auto;
 }
 
+/* =========
+   Old portfolio card grid (if you need it later)
+   ========= */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-}
-
-.portfolio-grid img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;     /* keeps the gallery from getting huge */
-    margin: auto;          /* centers the gallery */
+    max-width: 1200px;
+    margin: auto;
 }
 
 .portfolio-grid img {
     width: 100%;
     height: auto;
-    max-width: 100%;       /* let it fill the card */
+    max-width: 100%;
     border-radius: 10px;
-    object-fit: contain;   /* show whole image, no cropping */
+    object-fit: contain;
     justify-self: center;
 }
 
-/* Portfolio page */
+/* =========
+   Portfolio page hero
+   ========= */
 .page-hero {
     padding: 5rem min(8vw, 4rem) 3rem;
     background: radial-gradient(circle at top left, #ffffff 0, #f3f3f3 55%, #e7e7e7 100%);
@@ -329,9 +341,11 @@ body {
     margin: 0 auto;
 }
 
-/* Masonry Grid (Images Only) */
+/* =========
+   Masonry portfolio grid (images only)
+   ========= */
 .masonry-grid {
-    column-count: 4;
+    column-count: 4;          /* desktop */
     column-gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -344,42 +358,32 @@ body {
     break-inside: avoid;
     border-radius: 12px;
     display: block;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .masonry-item:hover {
     transform: scale(1.03);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
+/* Tablets */
 @media (max-width: 900px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
     .masonry-grid {
         column-count: 2;
     }
 }
 
-@media (max-width: 600px) {
-    .masonry-grid {
-        column-count: 1;
-    }
-
-    /* Tablets / small laptops */
-@media (max-width: 900px) {
-    .masonry-grid {
-        column-count: 3;     /* 3 columns on iPad / small screens */
-    }
-}
-
-/* Phones (iPhone etc.) */
-@media (max-width: 600px) {
-    .masonry-grid {
-        column-count: 2;     /* 2 columns on phones */
-    }
-}
-
-
-
+/* =========
+   Portfolio CTA text
+   ========= */
 .portfolio-cta {
     text-align: center;
     max-width: 500px;
@@ -400,75 +404,77 @@ body {
     color: #333;
 }
 
-
-/* PRICING */
+/* =========
+   Pricing
+   ========= */
 .pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto 2.5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 2.5rem auto;
 }
 
 .pricing-card {
-  background: #ffffff;
-  border-radius: 0.9rem;
-  padding: 1.5rem 1.6rem 1.75rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+    background: #ffffff;
+    border-radius: 0.9rem;
+    padding: 1.5rem 1.6rem 1.75rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 .pricing-card--highlight {
-  border: 2px solid #111;
+    border: 2px solid #111;
 }
 
 .pricing-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .pricing-price {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin: 0.1rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0.1rem 0;
 }
 
 .pricing-tagline {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 0.5rem;
 }
 
 .pricing-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 .pricing-list li {
-  margin-bottom: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .pricing-note {
-  font-size: 0.85rem;
-  color: #777;
-  margin: 0.5rem 0 0;
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0.5rem 0 0;
 }
 
 .pricing-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #555;
-  max-width: 650px;
-  margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
-
-/* REVIEWS SECTION */
+/* =========
+   Reviews
+   ========= */
 .reviews-grid {
     max-width: 1100px;
     margin: 0 auto;
@@ -481,13 +487,13 @@ body {
     background: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .review-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .review-text {
@@ -517,18 +523,19 @@ body {
     color: #fff;
     font-size: 0.95rem;
     text-decoration: none;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .btn-review:hover {
     background: #333;
     transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(0,0,0,0.25);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
 }
 
-
-/* How It Works Section */
+/* =========
+   How It Works
+   ========= */
 .how-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -553,8 +560,8 @@ body {
 }
 
 .how-card img {
-    width: 160px;      /* increase this number for bigger icons */
-    height: 160px;     /* keep square shape */
+    width: 160px;
+    height: 160px;
     object-fit: contain;
     margin-bottom: 1rem;
     display: block;
@@ -572,15 +579,3 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
-
-
-
-
-
-
-
-
-
-
-
-
