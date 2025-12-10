@@ -59,6 +59,8 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-weight: 600;
+    text-decoration: none;  /* ADD THIS */
+    color: inherit;         /* ADD THIS */
 }
 
 .logo-mark {
@@ -579,3 +581,4 @@ body {
     font-size: 0.9rem;
     color: #555;
 }
+
